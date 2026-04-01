@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Play App</title>
+    <meta name="description"
+        content="Conectá con personas compatibles mientras jugás. La red social para gamers de Latinoamérica." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Background particles -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <span class="accent">▶</span> Let's Play App
+        </div>
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="pt">PT</button>
+        </div>
+    </nav>
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                <span data-i18n="hero.badge">Próximamente</span>
+            </div>
+
+            <h1>
+                <span data-i18n="hero.title_1">Jugás con alguien.</span><br />
+                <span class="gradient-text" data-i18n="hero.title_2">Hacé un amigo.</span>
+            </h1>
+
+            <p class="hero-sub" data-i18n="hero.subtitle">
+                La red social que detecta cuando coincidís con personas compatibles en tus juegos favoritos. Hecha por y
+                para la comunidad gamer de Latinoamérica.
+            </p>
+
+            <div class="hero-ctas">
+                <button class="btn btn-primary"
+                    onclick="document.getElementById('cta-section').scrollIntoView({behavior:'smooth'})">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="4" width="20" height="16" rx="3" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    <span data-i18n="hero.cta_notify">Avisame cuando salga</span>
+                </button>
+                <a class="btn btn-secondary" href="#" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.227-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+                    </svg>
+                    <span data-i18n="hero.cta_discord">Sumate al Discord</span>
+                </a>
+            </div>
+
+            <div class="scroll-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14m-7-7 7 7 7-7" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="features">
+            <div class="reveal">
+                <p class="section-label" data-i18n="features.label">// qué es Let's Play</p>
+                <h2 class="section-title" data-i18n="features.title">No buscás amigos. Los encontrás jugando.</h2>
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card fc-encounter reveal">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-i18n="features.encounter.title">Encuentros Digitales</h3>
+                    <p data-i18n="features.encounter.desc">
+                        Detectamos cuando coincidís con alguien compatible en una partida. Sin buscar, sin filtros: la
+                        conexión surge del juego mismo.
+                    </p>
+                </div>
+
+                <div class="feature-card fc-compat reveal">
+                    <div class="feature-icon">🧩</div>
+                    <h3 data-i18n="features.compat.title">Compatibilidad real</h3>
+                    <p data-i18n="features.compat.desc">
+                        Un sistema que analiza personalidad, intereses y hábitos para conectarte con personas con las
+                        que realmente vas a hacer click.
+                    </p>
+                </div>
+
+                <div class="feature-card fc-latam reveal">
+                    <div class="feature-icon">🌎</div>
+                    <h3 data-i18n="features.latam.title">Hecha para LATAM</h3>
+                    <p data-i18n="features.latam.desc">
+                        Pensada desde el inicio para la comunidad gamer latinoamericana. En tu idioma, con tu cultura,
+                        cerca tuyo.
+                    </p>
+                </div>
+
+                <div class="feature-card fc-safe reveal">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 data-i18n="features.safe.title">Comunidad cuidada</h3>
+                    <p data-i18n="features.safe.desc">
+                        Moderación activa y políticas claras para que cada interacción sea positiva. Un espacio seguro
+                        para ser vos.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section" id="cta-section">
+            <div class="cta-box reveal">
+                <h2 data-i18n="cta.title">Sé de los primeros</h2>
+                <p class="cta-desc" data-i18n="cta.desc">
+                    Dejá tu correo y te avisamos cuando lancemos. O unite al Discord para pruebas cerradas y novedades.
+                </p>
+
+                <div class="email-form" id="email-form">
+                    <input type="email" id="email-input" data-i18n-placeholder="cta.placeholder"
+                        placeholder="tu@correo.com" />
+                    <button class="btn btn-primary" id="email-submit" type="button">
+                        <span data-i18n="cta.submit">Notificarme</span>
+                    </button>
+                </div>
+                <p class="form-msg" id="form-msg"></p>
+
+                <p class="divider-text" data-i18n="cta.or">— o —</p>
+
+                <a class="btn btn-secondary" href="#" target="_blank" rel="noopener" style="margin: 0 auto;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                        <path
+                            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.227-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+                    </svg>
+                    <span data-i18n="cta.discord">Unirme al Discord</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-copy">© 2026 Let's Play App</span>
+            <div class="visitor-counter">
+                <span class="counter-dot"></span>
+                <span id="visitor-count">—</span> <span data-i18n="footer.visitors">visitantes</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
