@@ -145,6 +145,24 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
 /* ─────────────────────────────────────
+   Nav logo: reveal only after the hero
+   logo has scrolled out from under the nav
+───────────────────────────────────── */
+(function initNavLogo() {
+    const heroLogo = document.querySelector(".hero-logo");
+    const navBrand = document.querySelector(".nav-brand");
+    if (!heroLogo || !navBrand) return;
+
+    const navLogoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            navBrand.classList.toggle("show-logo", !entry.isIntersecting);
+        });
+    }, { rootMargin: "-80px 0px 0px 0px", threshold: 0 });
+
+    navLogoObserver.observe(heroLogo);
+})();
+
+/* ─────────────────────────────────────
    Background particles
 ───────────────────────────────────── */
 (function initParticles() {

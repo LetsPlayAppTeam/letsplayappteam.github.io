@@ -95,6 +95,17 @@ a {
     color: var(--primary);
 }
 
+.nav-brand .nav-logo {
+    height: 2rem;
+    width: auto;
+    display: none;
+}
+
+.nav-brand.show-logo .nav-logo {
+    display: block;
+    animation: fadeInDown 0.4s ease both;
+}
+
 .lang-switch {
     display: flex;
     background: var(--bg-paper);
@@ -150,6 +161,14 @@ section {
     align-items: center;
     text-align: center;
     padding-top: 5rem;
+}
+
+.hero-logo {
+    display: block;
+    width: clamp(140px, 22vw, 220px);
+    height: auto;
+    margin: 0 auto 3rem;
+    animation: fadeInDown 0.8s ease both;
 }
 
 .hero-badge {
